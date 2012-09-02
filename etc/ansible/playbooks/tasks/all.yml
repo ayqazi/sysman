@@ -1,0 +1,31 @@
+---
+- name: apt repositories
+  action: command add-apt-repository -y 'deb http://archive.canonical.com/ubuntu precise partner'
+
+- name: apt-get update
+  action: apt update_cache=yes
+
+- name: install $item
+  action: apt pkg=$item state=installed
+  with_items:
+    - emacs
+    - screen
+    - openjdk-7-jdk
+    - p7zip
+    - ncftp
+    - lm-sensors
+    - build-essential
+    - curl
+    - git
+    - hddtemp
+    - apg
+    - pwgen
+    - proxychains
+    - tshark
+    - subversion
+    - update-manager
+    - tightvncserver
+
+    - zlib1g-dev
+    - libssl-dev
+    - libreadline6-dev

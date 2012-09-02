@@ -1,3 +1,21 @@
 ---
-- name: chromium-browser should be installed
-  action: apt pkg=chromium-browser state=installed
+- name: install $item
+  action: apt pkg=$item state=installed
+  with_items:
+    - chromium-browser
+    - gkrellm
+    - imwheel
+    - pidgin
+    - mplayer
+    - mrxvt
+    - mesa-utils
+    - ia32-libs
+    - acroread
+    - ksshaskpass
+    - rdesktop
+    - recordmydesktop
+    - ubuntu-wallpapers-precise
+    - kdewallpapers
+    - wireshark
+    - x11vnc
+    - xtightvncviewer
