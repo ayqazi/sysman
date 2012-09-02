@@ -1,0 +1,6 @@
+---
+- hosts: desktops
+  user: ayqazi
+  sudo: True
+  tasks:
+    - include: tasks/desktops.yml
