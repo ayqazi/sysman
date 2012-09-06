@@ -3,5 +3,6 @@
   user: ayqazi
   sudo: True
   tasks:
-    - include: tasks/all.yml
+    - include: tasks/beginning.yml
+    - include: tasks/common.yml
     - include: tasks/desktops.yml

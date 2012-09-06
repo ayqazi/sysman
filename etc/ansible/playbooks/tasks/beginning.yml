@@ -1,0 +1,9 @@
+---
+- name: apt repository $item
+  action: command add-apt-repository -y '$item'
+  with_items:
+    - deb http://archive.canonical.com/ubuntu precise partner
+    - ppa:trebelnik-stefina/synergy
+
+- name: apt-get update
+  action: apt update_cache=yes
