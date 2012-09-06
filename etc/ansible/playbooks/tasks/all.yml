@@ -8,8 +8,8 @@
 - name: apt-get update
   action: apt update_cache=yes
 
-- name: install $item
-  action: apt pkg=$item state=installed
+- name: install latest $item
+  action: apt pkg=$item state=latest
   with_items:
     - emacs
     - screen
