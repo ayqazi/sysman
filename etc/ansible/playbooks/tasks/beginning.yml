@@ -7,3 +7,9 @@
 
 - name: apt-get update
   action: apt update_cache=yes
+
+- name: aptitude
+  action: apt pkg=aptitude state=latest
+
+- name: aptitude full-upgrade
+  action: command aptitude full-upgrade -y
