@@ -2,7 +2,6 @@
 - name: install latest $item
   action: apt pkg=$item state=latest
   with_items:
-    - emacs
     - screen
     - openjdk-7-jdk
     - p7zip

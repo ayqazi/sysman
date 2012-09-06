@@ -27,6 +27,8 @@
     - gimp
     - synergy
     - adobe-flashplugin
+    - emacs23
+    - emacs-goodies-el
 
     - libgtk2.0-dev
 
