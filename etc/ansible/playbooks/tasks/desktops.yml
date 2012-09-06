@@ -4,6 +4,7 @@
   with_items:
     - chromium-browser
     - gkrellm
+    - gkrellm-ibam
     - imwheel
     - pidgin
     - mplayer
@@ -19,3 +20,10 @@
     - wireshark
     - x11vnc
     - xtightvncviewer
+    - plasma-widget-quickaccess
+    - ttf-mscorefonts-installer
+    - fonts-droid
+    - gimp
+    - synergy
+
+    - libgtk2.0-dev

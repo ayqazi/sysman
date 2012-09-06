@@ -1,6 +1,9 @@
 ---
-- name: apt repositories
-  action: command add-apt-repository -y 'deb http://archive.canonical.com/ubuntu precise partner'
+- name: apt repository $item
+  action: command add-apt-repository -y '$item'
+  with_items:
+    - deb http://archive.canonical.com/ubuntu precise partner
+    - ppa:trebelnik-stefina/synergy
 
 - name: apt-get update
   action: apt update_cache=yes
@@ -25,6 +28,12 @@
     - subversion
     - update-manager
     - tightvncserver
+    - fuse-utils
+    - links
+    - netcat-traditional
+    - ntp
+    - schedtool
+    - pkg-config
 
     - zlib1g-dev
     - libssl-dev
