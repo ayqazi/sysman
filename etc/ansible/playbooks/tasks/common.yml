@@ -28,3 +28,11 @@
     - zlib1g-dev
     - libssl-dev
     - libreadline6-dev
+
+    - postgresql-9.1
+    - postgresql-client-9.1
+    - libpq-dev
+
+    - mysql-client-5.5
+    - mysql-server-5.5
+    - libmysqlclient-dev
