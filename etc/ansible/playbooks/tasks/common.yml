@@ -30,6 +30,7 @@
     - libreadline6-dev
     - libxml2-dev
     - libxslt1-dev
+    - libmagickwand-dev
 
     - postgresql-9.1
     - postgresql-client-9.1
