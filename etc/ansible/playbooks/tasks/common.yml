@@ -24,6 +24,7 @@
     - ntp
     - schedtool
     - pkg-config
+    - whois
 
     - zlib1g-dev
     - libssl-dev
