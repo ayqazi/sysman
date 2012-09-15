@@ -2,6 +2,7 @@
 - name: install latest $item
   action: apt pkg=$item state=latest
   with_items:
+    - kubuntu-restricted-addons
     - chromium-browser
     - firefox
     - gkrellm
@@ -26,7 +27,6 @@
     - fonts-droid
     - gimp
     - synergy
-    - adobe-flashplugin
     - emacs23
     - emacs-goodies-el
 
@@ -36,3 +36,4 @@
   action: apt pkg=$item state=removed purge=yes
   with_items:
     - xul-ext-ubufox
+    - adobe-flashplugin
