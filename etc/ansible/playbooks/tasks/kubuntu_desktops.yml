@@ -29,6 +29,7 @@
     - synergy
     - emacs23
     - emacs-goodies-el
+    - adobe-flashplugin
 
     - libgtk2.0-dev
 
@@ -36,4 +37,3 @@
   action: apt pkg=$item state=removed purge=yes
   with_items:
     - xul-ext-ubufox
-    - adobe-flashplugin
