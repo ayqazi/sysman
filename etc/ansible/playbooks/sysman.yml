@@ -5,4 +5,4 @@
   tasks:
     - include: tasks/beginning.yml
     - include: tasks/common.yml
-    - include: tasks/desktops.yml
+    - include: tasks/kubuntu_desktops.yml
