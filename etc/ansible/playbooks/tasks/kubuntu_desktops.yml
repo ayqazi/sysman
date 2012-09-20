@@ -30,6 +30,7 @@
     - emacs23
     - emacs-goodies-el
     - adobe-flashplugin
+    - audacity
 
     - libgtk2.0-dev
 
