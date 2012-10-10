@@ -25,6 +25,7 @@
     - schedtool
     - pkg-config
     - whois
+    - ufw
 
     - zlib1g-dev
     - libssl-dev
