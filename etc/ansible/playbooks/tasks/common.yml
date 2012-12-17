@@ -27,6 +27,7 @@
     - whois
     - ufw
     - disktype
+    - graphicsmagick
 
     - zlib1g-dev
     - libssl-dev
