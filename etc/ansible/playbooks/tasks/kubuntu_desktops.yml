@@ -30,6 +30,7 @@
     - emacs-goodies-el
     - adobe-flashplugin
     - audacity
+    - gparted
 
     - libgtk2.0-dev
 
