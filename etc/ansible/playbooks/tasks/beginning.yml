@@ -8,11 +8,8 @@
 - name: apt-get update
   action: apt update_cache=yes
 
-- name: aptitude
-  action: apt pkg=aptitude state=latest
-
-- name: aptitude full-upgrade
-  action: command /usr/bin/aptitude full-upgrade -y
+- name: apt-get dist-upgrade
+  action: command /usr/bin/apt-get dist-upgrade -y
 
 #- name: remove old kernels
 #  action: shell aptitude purge `dpkg -l| awk '$2 ~ /linux-image-[^g]/ {print $2}' | sort# | head -n -1`

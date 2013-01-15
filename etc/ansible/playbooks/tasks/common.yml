@@ -2,6 +2,7 @@
 - name: install latest $item
   action: apt pkg=$item state=latest
   with_items:
+    - aptitude
     - screen
     - openjdk-7-jdk
     - p7zip
