@@ -29,6 +29,8 @@
     - ufw
     - disktype
     - graphicsmagick
+    - pbzip2
+    - pigz
 
     - zlib1g-dev
     - libssl-dev
