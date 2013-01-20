@@ -32,6 +32,7 @@
     - pbzip2
     - pigz
     - sysstat
+    - pv
 
     - zlib1g-dev
     - libssl-dev
