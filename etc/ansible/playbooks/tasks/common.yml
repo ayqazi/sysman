@@ -1,4 +1,16 @@
 ---
+- name: purge $item
+  action: apt pkg=$item state=removed purge=yes
+  with_items:
+    - xul-ext-ubufox
+    - emacs23
+    - emacs23-bin-common
+    - emacs23-common
+    - emacs23-el
+    - emacs23-nox
+    - emacs23-lucid
+    - auctex
+
 - name: install latest $item
   action: apt pkg=$item state=latest
   with_items:
@@ -48,3 +60,7 @@
     - mysql-client-5.5
     - mysql-server-5.5
     - libmysqlclient-dev
+
+    - emacs24
+    - emacs24-el
+    - emacs24-common-non-dfsg
