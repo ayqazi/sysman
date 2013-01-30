@@ -3,13 +3,6 @@
   action: apt pkg=$item state=removed purge=yes
   with_items:
     - xul-ext-ubufox
-    - emacs23
-    - emacs23-bin-common
-    - emacs23-common
-    - emacs23-el
-    - emacs23-nox
-    - emacs23-lucid
-    - auctex
 
 - name: install latest $item
   action: apt pkg=$item state=latest
@@ -51,7 +44,6 @@
     - libreadline6-dev
     - libxml2-dev
     - libxslt1-dev
-    - libmagickwand-dev
 
     - postgresql-9.1
     - postgresql-client-9.1
