@@ -38,6 +38,7 @@
     - pigz
     - sysstat
     - pv
+    - autoconf
 
     - zlib1g-dev
     - libssl-dev
