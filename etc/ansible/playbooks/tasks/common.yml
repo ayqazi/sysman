@@ -39,6 +39,7 @@
     - sysstat
     - pv
     - autoconf
+    - dstat
 
     - zlib1g-dev
     - libssl-dev
