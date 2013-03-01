@@ -41,6 +41,7 @@
     - autoconf
     - dstat
     - powertop
+    - powertop-1.13
 
     - zlib1g-dev
     - libssl-dev
