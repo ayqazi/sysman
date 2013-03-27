@@ -42,6 +42,7 @@
     - dstat
     - powertop
     - powertop-1.13
+    - iperf
 
     - zlib1g-dev
     - libssl-dev
