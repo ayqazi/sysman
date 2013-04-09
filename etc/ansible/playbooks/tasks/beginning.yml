@@ -3,6 +3,7 @@
   action: command add-apt-repository -y '$item'
   with_items:
     - ppa:trebelnik-stefina/synergy
+    - ppa:chromium-daily/stable
 
 - name: apt-get update
   action: apt update_cache=yes

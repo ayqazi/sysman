@@ -61,3 +61,5 @@
     - emacs24
     - emacs24-el
     - emacs-goodies-el
+
+    - ppa-purge
