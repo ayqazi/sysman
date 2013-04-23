@@ -2,12 +2,18 @@
 - name: disable lightdm guest login
   action: command /usr/lib/lightdm/lightdm-set-defaults --allow-guest false
 
+- name: purge $item
+  action: apt pkg=$item state=removed purge=yes
+  with_items:
+    - kubuntu-firefox-installer
+
 - name: install latest $item
   action: apt pkg=$item state=latest
   with_items:
     - kubuntu-restricted-addons
     - chromium-browser
     - firefox
+    - firefox-locale-en
     - gkrellm
     - gkrellm-ibam
     - imwheel
@@ -35,3 +41,8 @@
     - skype
 
     - libgtk2.0-dev
+
+- name: purge (after others) $item
+  action: apt pkg=$item state=removed purge=yes
+  with_items:
+    - xul-ext-ubufox

@@ -1,10 +1,4 @@
 ---
-- name: purge $item
-  action: apt pkg=$item state=removed purge=yes
-  with_items:
-    - xul-ext-ubufox
-    - kubuntu-firefox-installer
-
 - name: install latest $item
   action: apt pkg=$item state=latest
   with_items:
