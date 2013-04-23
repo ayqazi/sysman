@@ -63,3 +63,5 @@
     - openssh-client
     - openssh-server
     - openssh-blacklist-extra
+
+    - unison
