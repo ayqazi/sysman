@@ -3,13 +3,18 @@
   action: command add-apt-repository -y '$item'
   with_items:
     - ppa:trebelnik-stefina/synergy
+    - http://archive.canonical.com/ubuntu partner
+
+- name: remove apt repository $item
+  action: command add-apt-repository -ry '$item'
+  with_items:
     - ppa:chromium-daily/stable
 
-- name: apt-get update
-  action: apt update_cache=yes
+- name: apt update & upgrade
+  action: apt update_cache=yes upgrade=dist
 
-- name: apt-get dist-upgrade
-  action: command /usr/bin/apt-get dist-upgrade -y
+#- name: apt-get dist-upgrade
+#  action: command /usr/bin/apt-get dist-upgrade -y
 
 #- name: remove old kernels
 #  action: shell aptitude purge `dpkg -l| awk '$2 ~ /linux-image-[^g]/ {print $2}' | sort# | head -n -1`

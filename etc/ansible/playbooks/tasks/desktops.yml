@@ -1,4 +1,7 @@
 ---
+- name: disable lightdm guest login
+  action: command /usr/lib/lightdm/lightdm-set-defaults --allow-guest false
+
 - name: install latest $item
   action: apt pkg=$item state=latest
   with_items:

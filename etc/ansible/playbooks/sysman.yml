@@ -1,8 +1,19 @@
 ---
-- hosts: desktops
+- hosts: all
   user: ayqazi
   sudo: True
   tasks:
     - include: tasks/beginning.yml
     - include: tasks/common.yml
-    - include: tasks/kubuntu_desktops.yml
+
+- hosts: desktops
+  user: ayqazi
+  sudo: True
+  tasks:
+    - include: tasks/desktops.yml
+
+- hosts: desktops:&vms
+  user: ayqazi
+  sudo: True
+  tasks:
+    - include: tasks/desktops-vms.yml

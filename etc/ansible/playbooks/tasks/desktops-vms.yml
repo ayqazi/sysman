@@ -1,0 +1,5 @@
+---
+- name: install latest $item
+  action: apt pkg=$item state=latest
+  with_items:
+    - open-vm-toolbox
