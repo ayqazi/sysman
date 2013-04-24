@@ -1,4 +1,7 @@
 ---
+- name: set user groups
+  action: user name=ayqazi append=yes groups=video
+
 - name: install latest $item
   action: apt pkg=$item state=latest
   with_items:
