@@ -39,6 +39,7 @@
     - audacity
     - gparted
     - skype
+    - ttf-mscorefonts-installer
 
     - libgtk2.0-dev
 
