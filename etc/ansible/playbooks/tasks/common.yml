@@ -8,7 +8,7 @@
     - aptitude
     - screen
     - openjdk-7-jdk
-    - p7zip
+    - p7zip-full
     - ncftp
     - lm-sensors
     - build-essential
