@@ -21,7 +21,6 @@
     - tshark
     - subversion
     - update-manager
-    - tightvncserver
     - fuse-utils
     - links
     - netcat-traditional
@@ -56,7 +55,6 @@
     - mysql-server-5.5
     - libmysqlclient-dev
 
-    - emacs24
     - emacs24-el
     - emacs-goodies-el
 

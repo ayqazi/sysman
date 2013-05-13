@@ -40,6 +40,7 @@
     - gparted
     - skype
     - ttf-mscorefonts-installer
+    - emacs24
 
     - libgtk2.0-dev
 

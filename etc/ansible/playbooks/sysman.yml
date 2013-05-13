@@ -6,6 +6,12 @@
     - include: tasks/beginning.yml
     - include: tasks/common.yml
 
+- hosts: servers
+  user: ayqazi
+  sudo: True
+  tasks:
+    - include: tasks/servers.yml
+
 - hosts: desktops
   user: ayqazi
   sudo: True
