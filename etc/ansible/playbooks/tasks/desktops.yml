@@ -12,6 +12,7 @@
   with_items:
     - kubuntu-restricted-addons
     - chromium-browser
+    - chromium-codecs-ffmpeg-extra
     - firefox
     - firefox-locale-en
     - gkrellm
