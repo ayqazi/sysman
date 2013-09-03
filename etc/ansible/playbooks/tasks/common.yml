@@ -40,6 +40,8 @@
     - powertop
     - powertop-1.13
     - iperf
+    - iotop
+    - ionice
 
     - zlib1g-dev
     - libssl-dev
