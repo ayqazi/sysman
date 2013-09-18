@@ -1,9 +1,14 @@
 ---
-- name: set user groups
-  action: user name=ayqazi append=yes groups=video
+
+- name: add user to groups
+  action: user name=ayqazi append=yes groups={{ item }}
+  with_items:
+    - video
+    - fuse
+  tags: now
 
 - name: install latest $item
-  action: apt pkg=$item state=latest
+  action: apt pkg={{ item }} state=latest
   with_items:
     - aptitude
     - screen
@@ -40,7 +45,6 @@
     - powertop
     - powertop-1.13
     - iperf
-    - iotop
 
     - zlib1g-dev
     - libssl-dev
@@ -68,3 +72,7 @@
 
     - unison
     - reptyr
+    - iotop
+    - ionice
+    - curlftpfs
+    - sshfs
