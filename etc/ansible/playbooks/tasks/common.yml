@@ -76,3 +76,4 @@
     - ionice
     - curlftpfs
     - sshfs
+    - powermanagement-interface
