@@ -76,3 +76,9 @@
     - ionice
     - curlftpfs
     - sshfs
+    - libyaml-dev
+    - sqlite3
+    - libgdbm-dev
+    - libncurses5-dev
+    - bison
+    - libffi-dev
