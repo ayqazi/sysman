@@ -26,7 +26,6 @@
     - tshark
     - subversion
     - update-manager
-    - fuse-utils
     - links
     - netcat-traditional
     - ntp
@@ -73,7 +72,6 @@
     - unison
     - reptyr
     - iotop
-    - ionice
     - curlftpfs
     - sshfs
     - libyaml-dev

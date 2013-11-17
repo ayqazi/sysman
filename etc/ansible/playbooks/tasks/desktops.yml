@@ -22,8 +22,6 @@
     - mplayer
     - mrxvt
     - mesa-utils
-    - ia32-libs
-    - acroread
     - ksshaskpass
     - rdesktop
     - recordmydesktop
