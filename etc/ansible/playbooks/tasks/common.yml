@@ -80,3 +80,4 @@
     - libncurses5-dev
     - bison
     - libffi-dev
+    - debconf-utils
