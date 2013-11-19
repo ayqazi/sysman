@@ -5,7 +5,8 @@
   with_items:
     - video
     - fuse
-  tags: now
+
+- lineinfile: dest=/etc/acpi/events/powerbtn state=present regexp=^(action=/etc/acpi/powerbtn\.sh) line='# \1' backrefs=yes
 
 - name: install latest $item
   action: apt pkg={{ item }} state=latest
