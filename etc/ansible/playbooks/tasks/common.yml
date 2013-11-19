@@ -81,3 +81,4 @@
     - bison
     - libffi-dev
     - debconf-utils
+    - linux-tools
