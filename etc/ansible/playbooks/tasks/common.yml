@@ -83,3 +83,9 @@
     - libffi-dev
     - debconf-utils
     - linux-tools
+
+    # For namecoin
+    - libboost-all-dev
+    - libglibmm-2.4-dev
+    - libminiupnpc-dev
+    - libdb++-dev
