@@ -8,7 +8,7 @@
 
 - lineinfile: dest=/etc/acpi/events/powerbtn state=present regexp=^(action=/etc/acpi/powerbtn\.sh) line='# \1' backrefs=yes
 
-- ini_file: dest=/etc/systemd/logind.conf section=Login option=HandlePowerKey value=ignore
+- copy: dest=/etc/systemd/logind.conf src=../../../etc/systemd/logind.conf
   tags: [systemd]
 
 - service: name=systemd-logind state=restarted
