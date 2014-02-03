@@ -14,8 +14,10 @@
 - service: name=systemd-logind state=restarted
   tags: [systemd]
 
-- name: install latest $item
-  action: apt pkg={{ item }} state=latest
+- script: "{{ dir }}/bin/ufw.sh"
+  tags: ufw
+
+- apt: pkg={{ item }} state=latest
   with_items:
     - aptitude
     - screen
