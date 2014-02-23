@@ -22,6 +22,7 @@
     - aptitude
     - screen
     - openjdk-7-jdk
+    - oracle-java8-installer
     - p7zip-full
     - ncftp
     - lm-sensors
@@ -97,3 +98,7 @@
     - libglibmm-2.4-dev
     - libminiupnpc-dev
     - libdb++-dev
+  tags: test
+
+- command: update-java-alternatives -s java-8-oracle
+  tags: test

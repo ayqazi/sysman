@@ -1,19 +1,17 @@
 ---
-- name: apt repository $item
-  action: command add-apt-repository -y '$item'
+- command: apt-add-repository -y '{{ item }}'
   with_items:
     - ppa:trebelnik-stefina/synergy
     - http://archive.canonical.com/ubuntu partner
+    - ppa:webupd8team/java
 
-- name: remove apt repository $item
-  action: command add-apt-repository -ry '$item'
+- command: apt-add-repository -ry '{{ item }}'
   with_items:
     - ppa:chromium-daily/stable
 
-- name: apt update & upgrade
-  action: apt update_cache=yes upgrade=dist
+- apt: update_cache=yes upgrade=dist
 
-- shell: echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections
+- command: debconf-set-selections "{{ dir }}/etc/apt/debconf-selections"
 
 #- name: remove old kernels
 #  action: shell aptitude purge `dpkg -l| awk '$2 ~ /linux-image-[^g]/ {print $2}' | sort# | head -n -1`

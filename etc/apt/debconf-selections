@@ -1,0 +1,2 @@
+ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true
+* shared/accepted-oracle-license-v1-1 select true
