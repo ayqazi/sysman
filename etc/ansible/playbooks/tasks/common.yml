@@ -1,22 +1,5 @@
 ---
 
-- name: add user to groups
-  action: user name=ayqazi append=yes groups={{ item }}
-  with_items:
-    - video
-    - fuse
-
-- lineinfile: dest=/etc/acpi/events/powerbtn state=present regexp=^(action=/etc/acpi/powerbtn\.sh) line='# \1' backrefs=yes
-
-- copy: dest=/etc/systemd/logind.conf src=../../../etc/systemd/logind.conf
-  tags: [systemd]
-
-- service: name=systemd-logind state=restarted
-  tags: [systemd]
-
-- script: "{{ dir }}/bin/ufw.sh"
-  tags: ufw
-
 - apt: pkg={{ item }} state=latest
   with_items:
     - aptitude
@@ -102,3 +85,20 @@
 
 - command: update-java-alternatives -s java-8-oracle
   tags: test
+
+- name: add user to groups
+  action: user name=ayqazi append=yes groups={{ item }}
+  with_items:
+    - video
+    - fuse
+
+- lineinfile: dest=/etc/acpi/events/powerbtn state=present regexp=^(action=/etc/acpi/powerbtn\.sh) line='# \1' backrefs=yes
+
+- copy: dest=/etc/systemd/logind.conf src=../../../etc/systemd/logind.conf
+  tags: [systemd]
+
+- service: name=systemd-logind state=restarted
+  tags: [systemd]
+
+- script: "{{ dir }}/bin/ufw.sh"
+  tags: ufw
