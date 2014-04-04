@@ -6,4 +6,4 @@ alias ufw=`which ufw`
 
 ufw enable
 ufw default reject
-# UFW allow in 5000
+ufw reject out smtp
