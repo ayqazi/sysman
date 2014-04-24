@@ -3,3 +3,12 @@
   action: apt pkg=$item state=latest
   with_items:
     - open-vm-toolbox
+
+- copy: src={{ dir }}/etc/lightdm/display-setup.sh dest=/etc/lightdm/display-setup.sh owner=root group=root mode=0755
+  tags: [lightdm]
+
+- copy: src={{ dir }}/etc/lightdm/lightdm.conf.d/60-display-setup-script.conf dest=/etc/lightdm/lightdm.conf.d/60-display-setup-script.conf owner=root group=root mode=0644
+  tags: [lightdm]
+
+- service: name=lightdm state=restarted
+  tags: [lightdm]
