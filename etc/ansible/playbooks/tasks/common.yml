@@ -44,12 +44,12 @@
     - libxml2-dev
     - libxslt1-dev
 
-    - postgresql-9.1
-    - postgresql-client-9.1
+    - postgresql-9.3
+    - postgresql-client-9.3
     - libpq-dev
 
-    - mysql-client-5.5
-    - mysql-server-5.5
+    - mysql-client-5.6
+    - mysql-server-5.6
     - libmysqlclient-dev
 
     - emacs24-el
@@ -76,15 +76,7 @@
     - debconf-utils
     - linux-tools
 
-    # For namecoin
-    - libboost-all-dev
-    - libglibmm-2.4-dev
-    - libminiupnpc-dev
-    - libdb++-dev
-  tags: test
-
 - command: update-java-alternatives -s java-8-oracle
-  tags: test
 
 - name: add user to groups
   action: user name=ayqazi append=yes groups={{ item }}
