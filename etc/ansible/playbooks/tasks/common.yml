@@ -48,8 +48,8 @@
     - postgresql-client-9.3
     - libpq-dev
 
-    - mysql-client-5.6
-    - mysql-server-5.6
+    - mysql-client-5.5
+    - mysql-server-5.5
     - libmysqlclient-dev
 
     - emacs24-el
@@ -74,7 +74,7 @@
     - bison
     - libffi-dev
     - debconf-utils
-    - linux-tools
+    - linux-tools-generic
 
 - command: update-java-alternatives -s java-8-oracle
 

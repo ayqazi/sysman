@@ -1,13 +1,12 @@
 ---
 - command: apt-add-repository -y '{{ item }}'
   with_items:
-    - ppa:trebelnik-stefina/synergy
     - http://archive.canonical.com/ubuntu partner
     - ppa:webupd8team/java
 
-- command: apt-add-repository -ry '{{ item }}'
-  with_items:
-    - ppa:chromium-daily/stable
+#- command: apt-add-repository -ry '{{ item }}'
+#  with_items:
+#    - ppa:chromium-daily/stable
 
 - apt: update_cache=yes upgrade=dist
 

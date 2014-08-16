@@ -2,12 +2,11 @@
 - name: disable lightdm guest login
   action: command /usr/lib/lightdm/lightdm-set-defaults --allow-guest false
 
-- apt pkg=$item state=removed purge=yes
+- apt: pkg={{ item }} state=removed purge=yes
   with_items:
     - kubuntu-firefox-installer
 
-- name: install latest $item
-  action: apt pkg={{ item }} state=latest
+- apt: pkg={{ item }} state=latest
   with_items:
     - kubuntu-restricted-addons
     - chromium-browser
@@ -32,7 +31,6 @@
     - plasma-widget-quickaccess
     - fonts-droid
     - gimp
-    - synergy
     - flashplugin-installer
     - audacity
     - gparted
@@ -46,7 +44,7 @@
 
     - libgtk2.0-0:i386 # required by acroread binaries
 
-- name: purge (after others) $item
-  action: apt pkg=$item state=removed purge=yes
+- name: purge (after others) {{ item }}
+  action: apt pkg={{ item }} state=removed purge=yes
   with_items:
     - xul-ext-ubufox
