@@ -1,6 +1,10 @@
 ---
 - name: disable lightdm guest login
-  action: command /usr/lib/lightdm/lightdm-set-defaults --allow-guest false
+  action: copy dest=/usr/share/lightdm/lightdm.conf.d/50-no-guest.conf src=../../../usr/share/lightdm/lightdm.conf.d/50-no-guest.conf
+  tags: [lightdm]
+
+- service: name=lightdm state=restarted
+  tags: [lightdm]
 
 - apt: pkg={{ item }} state=removed purge=yes
   with_items:
