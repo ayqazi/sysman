@@ -76,7 +76,7 @@
     - libffi-dev
     - debconf-utils
     - linux-tools-generic
-    - libfile-homedir-perl
+    - libmath-round-perl
 
 - command: update-java-alternatives -s java-8-oracle
 
