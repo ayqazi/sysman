@@ -2,12 +2,8 @@
 
 - apt: pkg={{ item }} state=latest
   with_items:
-    - aptitude
     - screen
-    - openjdk-7-jdk
-    - oracle-java8-installer
-    - p7zip-full
-    - ncftp
+    - oracle-java9-installer
     - lm-sensors
     - build-essential
     - curl
@@ -15,9 +11,6 @@
     - hddtemp
     - apg
     - pwgen
-    - proxychains
-    - tshark
-    - subversion
     - update-manager
     - links
     - netcat-traditional
@@ -26,11 +19,7 @@
     - pkg-config
     - whois
     - ufw
-    - disktype
-    - graphicsmagick
     - pbzip2
-    - pigz
-    - sysstat
     - pv
     - autoconf
     - dstat
@@ -44,14 +33,10 @@
     - libxml2-dev
     - libxslt1-dev
 
-    - postgresql-9.3
-    - postgresql-client-9.3
-    - postgresql-contrib-9.3
+    - postgresql-9.4
+    - postgresql-client-9.4
+    - postgresql-contrib-9.4
     - libpq-dev
-
-    - mysql-client-5.5
-    - mysql-server-5.5
-    - libmysqlclient-dev
 
     - emacs24-el
     - emacs-goodies-el
@@ -63,11 +48,6 @@
     - openssh-server
     - openssh-blacklist-extra
 
-    - unison
-    - reptyr
-    - iotop
-    - curlftpfs
-    - sshfs
     - libyaml-dev
     - sqlite3
     - libgdbm-dev
@@ -78,13 +58,13 @@
     - linux-tools-generic
     - libmath-round-perl
 
-- command: update-java-alternatives -s java-8-oracle
+- command: update-java-alternatives -s java-9-oracle
 
 - name: add user to groups
   action: user name=ayqazi append=yes groups={{ item }}
   with_items:
     - video
-    - fuse
+    # - fuse
 
 - lineinfile: dest=/etc/acpi/events/powerbtn state=present regexp=^(action=/etc/acpi/powerbtn\.sh) line='# \1' backrefs=yes
 

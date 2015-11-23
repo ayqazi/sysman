@@ -4,10 +4,6 @@
     - http://archive.canonical.com/ubuntu partner
     - ppa:webupd8team/java
 
-#- command: apt-add-repository -ry '{{ item }}'
-#  with_items:
-#    - ppa:chromium-daily/stable
-
 - apt: update_cache=yes upgrade=dist
 
 - command: debconf-set-selections "{{ dir }}/etc/apt/debconf-selections"
