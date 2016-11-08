@@ -26,9 +26,8 @@
     - wireshark
     - x11vnc
     - xtightvncviewer
-    - fonts-droid
+    - fonts-droid-fallback
     - gimp
-    - flashplugin-installer
     - audacity
     - gparted
     - skype
