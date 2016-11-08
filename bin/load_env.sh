@@ -1,3 +1,3 @@
 #!/bin/bash
 
-export ANSIBLE_HOSTS=/opt/sysman/etc/ansible/hosts
+export ANSIBLE_HOSTS=/home/ayqazi/src/sysman/etc/ansible/hosts
