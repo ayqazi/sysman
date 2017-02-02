@@ -43,6 +43,7 @@
 
     - ppa-purge
     - nethogs
+    - jq
 
     - openssh-client
     - openssh-server
