@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -eu
+
+if [[ "$(id -u)" != 0 ]] ; then
+        echo "Run as root please (sudo -H)"
+        exit 1
+fi
+
+UBUNTU_RELEASE="$(lsb_release -c -s)"
+
+cd ansible/
+ansible-playbook -i localhost, -c local \
+                 -e ubuntu_release="${UBUNTU_RELEASE}" \
+                 "${@}" playbook.yaml

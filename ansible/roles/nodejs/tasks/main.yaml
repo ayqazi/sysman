@@ -1,0 +1,18 @@
+---
+- name: "Add node repo key"
+  apt_key:
+    url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+    state: present
+
+- name: "Add node repo"
+  apt_repository:
+    repo: "deb https://deb.nodesource.com/{{ node_repo }} {{ ubuntu_release }} main"
+    state: present
+
+- name: "Install nodejs and npm"
+  apt:
+    update_cache: true
+    name:
+      - nodejs
+      - npm
+    state: latest

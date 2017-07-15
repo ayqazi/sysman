@@ -1,0 +1,6 @@
+---
+- name: "Development support"
+  hosts: all
+  become: True
+  roles:
+    - { role: nodejs }
