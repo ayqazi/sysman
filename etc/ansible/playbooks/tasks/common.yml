@@ -1,9 +1,8 @@
 ---
-
 - apt: pkg={{ item }} state=latest
   with_items:
     - screen
-    - oracle-java9-installer
+    - oracle-java8-installer
     - lm-sensors
     - build-essential
     - curl
@@ -59,7 +58,11 @@
     - linux-tools-generic
     - libmath-round-perl
 
-- command: update-java-alternatives -s java-9-oracle
+- apt: { pkg: "{{ item }}", state: absent }
+  items:
+    - oracle-java8-set-default
+
+- command: update-java-alternatives -s java-8-oracle
 
 - name: add user to groups
   action: user name=ayqazi append=yes groups={{ item }}
